@@ -64,8 +64,7 @@ if st.button('Predict'):
     if pred[0]== 1:
         st.write(f'The likelihood of heart failure is High.')
     else:
-    # display the prediction result
-    st.write(f'The likelihood of heart failure is Low.')
+        st.write(f'The likelihood of heart failure is Low.')
  
 
     
