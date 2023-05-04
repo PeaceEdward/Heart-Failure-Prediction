@@ -40,9 +40,17 @@ thalach = st.slider('Maximum Heart Rate Achieved (bpm)', 50, 250, 150)
 exang_dict={0: 'No',1:'Yes'}
 exang = st.selectbox('Exercise Induced Angina', options=list(exang_dict.keys()), format_func=lambda x:exang_dict[x])
 oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 1.0, 0.1)
-slope = st.selectbox('Slope of the Peak Exercise ST Segment', [0, 1, 2])
-ca = st.selectbox('Number of Major Vessels Colored by Flourosopy', [0, 1, 2, 3])
-thal = st.selectbox('Thalassemia', [0, 1, 2, 3])
+
+slope_dict={1:'Upsloping',2:'Flat',3:'Downsloping'}
+slope = st.selectbox('Slope of the Peak Exercise ST Segment', options=list(slope_dict.keys()), format_func=lambda x:slope_dict[x])
+
+ca = st.selectbox('Number of Major Vessels Colored by Flouroscopy', [0, 1, 2, 3])
+
+thal_dict = {1: 'normal', 2: 'fixed defect', 3: 'reversible defect'}
+
+# Use the dictionary to display the string representation of thal in the app
+thal = st.selectbox('Thalessemia', options=list(thal_dict.keys()), format_func=lambda x: thal_dict[x])
+
 
 
     # define a function to predict the likelihood of heart failure
