@@ -60,7 +60,7 @@ def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
 if st.button('Predict'):
 # predict the likelihood of heart failure
     pred = predict_heart_failure(cp,thalach, exang, oldpeak, slope, ca, thal)
-    st.write(f'The likelihood of heart failure is {pred:.2f}}.')
+    st.write(f'The likelihood of heart failure is {pred:.2f}.')
 
         
  
