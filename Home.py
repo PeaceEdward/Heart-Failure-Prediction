@@ -61,9 +61,9 @@ def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
    return pred[0]
 
     # add a button to make the prediction
-    if st.button('Predict'):
-        # predict the likelihood of heart failure
-        pred = predict_heart_failure(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
+if st.button('Predict'):
+# predict the likelihood of heart failure
+    pred = predict_heart_failure(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
 
-        # display the prediction result
-        st.write(f'The likelihood of heart failure is {pred:.2f}.')
+    # display the prediction result
+    st.write(f'The likelihood of heart failure is {pred:.2f}.')
