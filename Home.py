@@ -21,13 +21,13 @@ with open(scaler_path, 'rb') as f:
 
 # define a function to predict the likelihood of heart failure
 def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
-    # scale the input data using the pre-trained scaler
-    input_data = np.array([ cp, thalach, exang, oldpeak, slope, ca, thal]).reshape(1, -1)
-    scaled_data = scaler.transform(input_data)
+# scale the input data using the pre-trained scaler
+   input_data = np.array([ cp, thalach, exang, oldpeak, slope, ca, thal]).reshape(1, -1)
+   scaled_data = scaler.transform(input_data)
 
-    # make a prediction using the pre-trained logistic regression model
-    pred = model.predict_proba(scaled_data)[:, 1]
-    return pred[0]
+# make a prediction using the pre-trained logistic regression model
+pred = model.predict_proba(scaled_data)[:, 1]
+return pred[0]
 
 # define the Streamlit app
 def app():
