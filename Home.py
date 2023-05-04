@@ -19,8 +19,6 @@ with open(model_path, 'rb') as f:
 with open(scaler_path, 'rb') as f:
     scaler = pickle.load(f)
     
-if __name__ == "__main__":
-  main()
 
 # define the Streamlit app
 def main():
@@ -67,3 +65,8 @@ if st.button('Predict'):
 
     # display the prediction result
     st.write(f'The likelihood of heart failure is {pred:.2f}.')
+ 
+if __name__ == "__main__":
+  main()
+
+    
