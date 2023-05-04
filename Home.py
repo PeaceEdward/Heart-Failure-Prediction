@@ -37,7 +37,8 @@ cp_dict = {0: 'Typical angina', 1: 'Atypical angina', 2: 'Non-anginal pain', 3: 
 cp = st.selectbox('Chest Pain Type', options=list(cp_dict.keys()), format_func=lambda x: cp_dict[x])
 #cp = st.selectbox('Chest Pain Type', [0, 1, 2, 3])
 thalach = st.slider('Maximum Heart Rate Achieved (bpm)', 50, 250, 150)
-exang = st.selectbox('Exercise Induced Angina', [0, 1])
+exang_dict={0: 'No',1:'Yes}
+exang = st.selectbox('Exercise Induced Angina', options=list(exang_dict.keys()), format_func=lambda x:exang_dict[x])
 oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 1.0, 0.1)
 slope = st.selectbox('Slope of the Peak Exercise ST Segment', [0, 1, 2])
 ca = st.selectbox('Number of Major Vessels Colored by Flourosopy', [0, 1, 2, 3])
