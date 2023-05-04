@@ -32,7 +32,10 @@ if __name__ == "__main__":
 
     # add input widgets for heart health parameters
 
-cp = st.selectbox('Chest Pain Type', [0, 1, 2, 3])
+cp_dict = {0: 'Typical angina', 1: 'Atypical angina', 2: 'Non-anginal pain', 3: 'Asymptomatic'}
+
+cp = st.selectbox('Chest Pain Type', options=list(cp_dict.keys()), format_func=lambda x: cp_dict[x])
+#cp = st.selectbox('Chest Pain Type', [0, 1, 2, 3])
 thalach = st.slider('Maximum Heart Rate Achieved (bpm)', 50, 250, 150)
 exang = st.selectbox('Exercise Induced Angina', [0, 1])
 oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 1.0, 0.1)
