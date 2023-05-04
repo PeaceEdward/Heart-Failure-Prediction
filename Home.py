@@ -33,7 +33,7 @@ def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
    return pred[0]
 
 # define the Streamlit app
-def app():
+def main():
     # set the page title
     st.set_page_config(page_title='Heart Failure Prediction')
 
