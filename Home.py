@@ -19,12 +19,11 @@ with open(model_path, 'rb') as f:
 with open(scaler_path, 'rb') as f:
     scaler = pickle.load(f)
     
+st.set_page_config(page_title='Heart Failure Prediction')
 
+    
 # define the Streamlit app
 def main():
-    # set the page title
-    st.set_page_config(page_title='Heart Failure Prediction')
-
     # set the app header
     st.title('Heart Failure Prediction')
 
