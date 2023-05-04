@@ -53,16 +53,19 @@ def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
    scaled_data = scaler.transform(input_data)
 
   # make a prediction using the pre-trained logistic regression model
-   pred = model.predict_proba(scaled_data)[:, 1]
+   pred = model.predict(scaled_data)[:, 1]
    return pred[0]
 
     # add a button to make the prediction
 if st.button('Predict'):
 # predict the likelihood of heart failure
     pred = predict_heart_failure(cp,thalach, exang, oldpeak, slope, ca, thal)
-
+    
+    if pred[0]== 1:
+        st.write(f'The likelihood of heart failure is High.')
+    else:
     # display the prediction result
-    st.write(f'The likelihood of heart failure is {pred:.2f}.')
+    st.write(f'The likelihood of heart failure is Low.')
  
 
     
