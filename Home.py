@@ -18,6 +18,9 @@ with open(model_path, 'rb') as f:
     model = pickle.load(f)
 with open(scaler_path, 'rb') as f:
     scaler = pickle.load(f)
+    
+if __name__ == "__main__":
+  main()
 
 # define a function to predict the likelihood of heart failure
 def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
