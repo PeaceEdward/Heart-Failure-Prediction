@@ -22,16 +22,6 @@ with open(scaler_path, 'rb') as f:
 if __name__ == "__main__":
   main()
 
-# define a function to predict the likelihood of heart failure
-def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
-# scale the input data using the pre-trained scaler
-   input_data = np.array([ cp, thalach, exang, oldpeak, slope, ca, thal]).reshape(1, -1)
-   scaled_data = scaler.transform(input_data)
-
-  # make a prediction using the pre-trained logistic regression model
-   pred = model.predict_proba(scaled_data)[:, 1]
-   return pred[0]
-
 # define the Streamlit app
 def main():
     # set the page title
@@ -57,6 +47,18 @@ def main():
 
     # convert the sex input to numerical form (0 for male, 1 for female)
     #sex = 0 if sex == 'Male' else 1
+
+    
+    
+    # define a function to predict the likelihood of heart failure
+def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
+# scale the input data using the pre-trained scaler
+   input_data = np.array([ cp, thalach, exang, oldpeak, slope, ca, thal]).reshape(1, -1)
+   scaled_data = scaler.transform(input_data)
+
+  # make a prediction using the pre-trained logistic regression model
+   pred = model.predict_proba(scaled_data)[:, 1]
+   return pred[0]
 
     # add a button to make the prediction
     if st.button('Predict'):
