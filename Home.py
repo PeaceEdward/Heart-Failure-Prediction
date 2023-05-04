@@ -25,9 +25,9 @@ def predict_heart_failure( cp, thalach, exang, oldpeak, slope, ca, thal):
    input_data = np.array([ cp, thalach, exang, oldpeak, slope, ca, thal]).reshape(1, -1)
    scaled_data = scaler.transform(input_data)
 
-# make a prediction using the pre-trained logistic regression model
-pred = model.predict_proba(scaled_data)[:, 1]
-return pred[0]
+  # make a prediction using the pre-trained logistic regression model
+   pred = model.predict_proba(scaled_data)[:, 1]
+   return pred[0]
 
 # define the Streamlit app
 def app():
