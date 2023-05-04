@@ -26,6 +26,9 @@ st.set_page_config(page_title='Heart Failure Prediction')
 def main():
     # set the app header
     st.title('Heart Failure Prediction')
+    
+if __name__ == "__main__":
+  main()
 
     # add input widgets for heart health parameters
 
@@ -56,7 +59,5 @@ if st.button('Predict'):
     # display the prediction result
     st.write(f'The likelihood of heart failure is {pred:.2f}.')
  
-if __name__ == "__main__":
-  main()
 
     
