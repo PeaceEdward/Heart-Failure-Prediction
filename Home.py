@@ -37,7 +37,7 @@ cp = st.selectbox('Chest Pain Type', options=list(cp_dict.keys()), format_func=l
 thalach = st.slider('Maximum Heart Rate Achieved (bpm)', 50, 250, 150)
 exang_dict={0: 'No',1:'Yes'}
 exang = st.selectbox('Exercise Induced Angina', options=list(exang_dict.keys()), format_func=lambda x:exang_dict[x])
-oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 1.0, 0.1)
+oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 1.0, 1.0)
 slope_dict={1:'Upsloping',2:'Flat',3:'Downsloping'}
 slope = st.selectbox('Slope of the Peak Exercise ST Segment', options=list(slope_dict.keys()), format_func=lambda x:slope_dict[x])
 ca = st.selectbox('Number of Major Vessels Colored by Flouroscopy', [0, 1, 2, 3])
