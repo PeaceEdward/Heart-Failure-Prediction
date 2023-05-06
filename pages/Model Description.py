@@ -12,8 +12,8 @@ filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "heart
 
 df=pd.read_csv(filepath)
 
-model_path = os.path.abspath(os.path.join(os.getcwd(), "resources", "models", "lrmodel.pkl"))
-scaler_path = os.path.abspath(os.path.join(os.getcwd(), "resources", "models", "scaler.pkl"))
+model_path = os.path.abspath(os.path.join(os.getcwd(), "resources", "models", "linmodel.pkl"))
+scaler_path = os.path.abspath(os.path.join(os.getcwd(), "resources", "models", "stascaler.pkl"))
 
 
 # load the pre-trained model and scaler from files
