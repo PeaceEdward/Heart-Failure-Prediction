@@ -4,6 +4,9 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 import os
 import pandas as pd
+from streamlit import theme
+
+
 
 primary_color = '#f63366'
 secondary_color = '#33f6f6'
