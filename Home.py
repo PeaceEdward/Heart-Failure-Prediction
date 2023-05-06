@@ -42,7 +42,7 @@ ca = st.selectbox('Number of Major Vessels Colored by Flouroscopy', [0, 1, 2, 3]
 thal_dict = {1: 'Normal', 2: 'Fixed defect', 3: 'Reversible defect'}
 thal = st.selectbox('Thalessemia', options=list(thal_dict.keys()), format_func=lambda x: thal_dict[x])
 thalach = st.slider('Maximum Heart Rate Achieved (bpm)', 50, 250, 50)
-oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 1.0, 1.0)
+oldpeak = st.slider('ST Depression Induced by Exercise', 0.0, 6.0, 1.0, 0.0)
 
 
 
