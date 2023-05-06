@@ -21,6 +21,8 @@ with open(model_path, 'rb') as f:
     model = pickle.load(f)
 with open(scaler_path, 'rb') as f:
     scaler = pickle.load(f)
+    
+st.title('Model Description')
 
 X=df[['cp','thalach','exang','oldpeak','slope','ca','thal']]
 y=df['target']
