@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "heart_disease_data.csv"))
 df = pd.read_csv(filepath)
 
+st.title('Summary Statistics')
+
 # Display the number of samples and features in the dataset
 num_samples, num_features = df.shape
 st.write(f"Number of samples: {num_samples}")
