@@ -5,6 +5,24 @@ from sklearn.preprocessing import StandardScaler
 import os
 import pandas as pd
 
+primary_color = '#f63366'
+secondary_color = '#33f6f6'
+tertiary_color = '#f6c633'
+
+# Set the font style
+font = 'sans serif'
+
+# Create the theme configuration
+custom_theme = theme.THEME_LIGHT.copy()
+custom_theme['primaryColor'] = primary_color
+custom_theme['secondaryBackgroundColor'] = secondary_color
+custom_theme['tertiaryBackgroundColor'] = tertiary_color
+custom_theme['font'] = font
+
+# Apply the custom theme
+st.set_theme(custom_theme)
+
+
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "heart_disease_data.csv"))
 
 df=pd.read_csv(filepath)
